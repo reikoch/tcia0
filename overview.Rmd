@@ -1,0 +1,20 @@
+---
+title: "Overview of TCIA"
+author: "N.N."
+date: "2020-01-30"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(haven)
+library(knitr)
+
+dm <- haven::read_xpt('data/dm.xpt')
+```
+
+## Simple Overview of Pool of Studies
+
+
+```{r table, echo=FALSE}
+kable(table(dm$STUDYID, dm$SEX), col.names = c('Females', 'Males'))
+```
